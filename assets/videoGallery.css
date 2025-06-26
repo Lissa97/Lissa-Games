@@ -1,0 +1,60 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5em;
+  margin-top: 1em;
+}
+
+.video-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.video-card:hover {
+  outline: 4px solid white;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.video-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.video-title {
+  padding: 0.8em;
+  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--calm-bg);
+
+  bottom: 0;
+  width: 95%;
+  font-size: 0.9em;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  color: black;
+  padding: 0.4em 0.6em;
+  border-radius: 50%;
+  font-size: 1.2em;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s;
+}
+
+.play-button:hover {
+    background: white;
+    color: var(--secondary-accent);
+}

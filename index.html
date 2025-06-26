@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lissa — The Art of Game Creation</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/videoGallery.css" />
+  <link rel="stylesheet" href="assets/carousel.css" />
+  <link rel="stylesheet" href="assets/Packages.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Cinzel+Decorative&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <header class="transparent">
+    <div >
+        <img src="images/Fox.png" class="avatar" alt="Lissa Avatar" />
+        <h1><b>Lissa — The Art of Game Creation</b></h1>
+    </div>
+    <!-- <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
+    </nav> -->
+  </header>
+  <main>
+
+    <nav class="journey-map">
+  <ul>
+    <li>
+      <a href="#about" class="nav-dot" data-label="About"></a>
+    </li>
+    <li>
+      <a href="#games" class="nav-dot" data-label="Games"></a>
+    </li>
+    <li>
+      <a href="#packages" class="nav-dot" data-label="Packages"></a>
+    </li>
+    <li>
+      <a href="#videos" class="nav-dot" data-label="Videos"></a>
+    </li>
+    <li>
+      <a href="#contacts" class="nav-dot" data-label="Contacts"></a>
+    </li>
+  </ul>
+</nav>
+    <section class="card" id="about">
+      <h2>Welcome!</h2>
+      <p>
+        I’m <strong>Lissa</strong> — game developer, artist, and tutorial maker.
+        This site is where I share everything I’ve built: original games, dev tools, and Unity content to help others learn and create.
+      </p>
+    </section>
+
+    <section class="card" id="games">
+        <h2>🎮 Featured Games</h2>
+    </section>
+
+    <section id="packages" class="card">
+      <h2>📦 My Packages</h2>
+      <div class="package-grid" id="packageGrid"></div>
+    </section>
+
+    <section id="videos" class="card">
+      <h2>🎥 My Videos</h2>
+    </section>
+
+    <section class="card" id="contacts">
+    <h2>🌐 Find Me Online</h2>
+    <div class="external-links-grid">
+        <a href="https://www.youtube.com/channel/UCF6zBZMrZuUMS0qmhBX-lwg" target="_blank" class="external-link vertical">
+        <img src="images/icons/youtube.png" alt="YouTube" style="height: 40%;"/>
+        <div class="link-label">YouTube</div>
+        </a>
+        <a href="https://lissa-games.itch.io" target="_blank" class="external-link vertical">
+        <img src="images/icons/itchio.svg" alt="itch.io" style="height: 43%;"/>
+        <div class="link-label">itch.io</div>
+        </a>
+        <a href="https://github.com/Lissa97" target="_blank" class="external-link vertical">
+        <img src="images/icons/github.svg" alt="GitHub" style="height: 30%;"/>
+        <div class="link-label">GitHub</div>
+        </a>
+        <a href="https://assetstore.unity.com/publishers/114962" target="_blank" class="external-link vertical">
+        <img src="images/icons/unity.svg" alt="Unity Asset Store" style="height: 25%;" />
+        <div class="link-label">Unity Assets</div>
+        </a>
+        <a href="https://play.google.com/store/apps/developer?id=LissaGames" target="_blank" class="external-link vertical">
+        <img src="images/icons/googleplay.png" alt="Google Play" style="height: 32%;"/>
+        <div class="link-label">Google Play</div>
+        </a>
+    </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Lissa</p>
+  </footer>
+</body>
+
+<script src="assets/Particles.js"></script>
+<script src="assets/Carousel.js"></script>
+<script src="assets/VideoGallery.js"></script>
+<script src="assets/Packages.js"></script>
+<script>
+    startParticle(document.getElementById('particle-canvas'));
+    CreateCarousel(
+        document.getElementById('games'), 
+        [
+            new CarouselElement(
+              "images/SplashscreenUnstoppableSanta.png", 
+              "Unstoppable Santa", 
+              "You are little Santa. You have to work in a delivery service. Every morning you go to the race, take a gift and looking for a chimney. But be careful! Don't fall off the roof and dodge obstacles. Oh, wait! You found a pet store, can you buy a helper pet?",
+              [{name: "Itch.io", href: "https://lissa-games.itch.io/unstoppable-santa-demo"},
+               {name: "Google Play", href: "https://play.google.com/store/apps/details?id=com.LissaGames.UnstoppableSantaDemo"}
+              ]),
+            new CarouselElement(
+              "images/PreparingForChristmas.png", 
+              "Preparing for Christmas", 
+              "While Dad is out shopping for Christmas gifts, little Robin is on a mission to decorate the yard for the holidays. Help him craft decorations to surprise his dad when he returns!",
+              [{name: "Itch.io", href: "https://lissa-games.itch.io/christmas-preparing"}]
+            ),
+        ]);
+        
+    LaodVideoGallery(
+      document.getElementById('videos'),
+      [
+        new VideoElement("hOBaWcI98h0", "All about Light Baking, LOD groups & Occlusion Culling"),
+        new VideoElement("RKT8wAkgKBA", "Beginner+ Scripting Guide : Your First Steps in Unity"),
+        new VideoElement("qNiha_PGe5I", "Mastering Unity Animator: Tips & Tricks!"),
+        new VideoElement("HW6Veho6poI", "Get Started with Animation in Unity"),
+        new VideoElement("zZVCgj1fXYA", "Unity Beginner's Guide: Complete Game Setup Tutorial"),
+      ]
+    )
+        
+  const packages = [
+    {
+      packageName: "CombatGraph",
+      ico: "images/CombatGraphCover.jpg",
+      description: "Visual node-based editor for designing buffs and effects in your Unity game.",
+      tags: ["Unity", "Graph Tool", "VFX"],
+      refs: [
+       // { refName: "Unity Asset Store", href: "https://github.com/lissa/effectgraph" },
+       // { refName: "GitHub", href: "https://github.com/lissa/effectgraph" },
+        { refName: "Documentation", href: "https://lissa-games.gitbook.io/combat-graph/" },
+      ]
+    },
+    
+  ];
+
+  renderPackages(packages);
+</script>
+
+<script>
+  const sections = document.querySelectorAll('section[id]');
+  const dots = document.querySelectorAll('.nav-dot');
+
+  function activateCurrentDot() {
+    let index = sections.length;
+
+    while (--index >= 0) {
+      const section = sections[index];
+      if (window.scrollY + 100 >= section.offsetTop) {
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[index]?.classList.add('active');
+        break;
+      }
+    }
+  }
+
+  window.addEventListener('scroll', activateCurrentDot);
+  window.addEventListener('load', activateCurrentDot);
+</script>
+<script>
+
+</script>
+
+</html>
